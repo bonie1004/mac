@@ -1,0 +1,912 @@
+@charset "utp-8";
+
+/* 전체 레이아웃 */
+#header {
+  position: fixed;
+  width: 100%;
+  height: 160px;
+  background-color: black;
+  z-index: 3;
+}
+
+#main {
+  width: 100%;
+  padding-top: 160px;
+  z-index: 1;
+}
+
+#footer {
+  background-color: #000;
+  color: #fff;
+  margin-top: 80px;
+  z-index: 2;
+}
+
+
+
+/* 헤더 */
+.header_nav {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  height: 87px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* 로그인 회원가입 */
+.nav_account {
+  display: flex;
+}
+
+.nav_account ul {
+  display: flex;
+}
+
+.nav_account ul li a {
+  color: #fff;
+  font-size: 15px;
+  font-weight: 300;
+}
+
+.nav_account ul li:nth-child(2):before {
+  content: '|';
+  padding: 0 10px;
+  display: inline-block;
+  color: #fff;
+  margin-right: 2px;
+}
+
+/* 아이콘(마이페이지,장바구니) */
+.nav_icon {
+  display: flex;
+}
+
+/* 로고 */
+.nav_logo img {
+  width: 122px;
+}
+
+.nav_icon ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav_icon li {
+  margin-right: 10px;
+}
+
+.nav_icon li:last-child {
+  margin-right: 0;
+}
+
+
+/* 헤더 라인 */
+.row {
+  border: 1px solid #fff;
+}
+
+/* 메뉴 */
+.header_menu {
+  width: 1480px;
+  margin: 0 auto;
+}
+
+.header_menu ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.header_menu ul li a {
+  color: #fff;
+  line-height: 73px;
+}
+
+/* 햄버거메뉴 */
+.menu_icon {
+  display: none;
+}
+
+/* 사이트맵 */
+.header_sitemap {
+  display: block;
+  position: fixed;
+  left: 0;
+  top: 87px;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  transition: all .5s;
+  background: #FFF;
+  z-index: 4;
+  box-shadow: 0 3px 12px rgb(0 0 0 / 20%);
+}
+
+.header_sitemap.on {
+  height: 340px;
+}
+
+.sitemap {
+  padding: 25px;
+}
+
+.sitemap ul li {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.sitemap ul li a {
+  font-weight: 600;
+  color: rgb(47, 47, 47);
+}
+
+
+
+
+
+/* 메인배너 */
+.main_banner {
+  position: relative;
+  display: flex;
+}
+
+.main_banner .main_text {
+  width: 50%;
+  position: relative;
+}
+
+
+.main_banner .main_title {
+  position: absolute;
+  width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.main_banner .main_title h2 {
+  display: inline;
+  text-transform: uppercase;
+}
+
+.main_banner .main_title p {
+  margin-top: 20px;
+}
+
+.main_banner .main_title span {
+  margin-top: 25px;
+  display: block;
+  font-size: 18px;
+  font-family: 'Roboto';
+}
+
+
+.main_banner .main_img {
+  width: 50%;
+  height: 820px;
+  background: url(/img/main_lasa.png)no-repeat;
+  background-position: center;
+}
+
+.m_main_text {
+  display: none;
+}
+
+/* 메이크업 트랜드 */
+.makeup_trend {
+  width: 100%;
+  background-color: #fff;
+}
+
+.makeup_trend_title {
+  text-align: center;
+  padding-top: 100px;
+}
+
+.makeup_trend_title h2 {
+  text-transform: uppercase;
+}
+
+.makeup_trend_img {
+  margin-top: 50px;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiper-button-next {
+  color: #fff;
+}
+
+.swiper-button-prev {
+  color: #fff;
+}
+
+
+
+
+/* 제품소개 */
+.product {
+  padding: 100px 0;
+}
+
+.container {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+}
+
+.product h2 {
+  text-align: center;
+}
+
+.product_title {
+  margin-top: 50px;
+  margin-bottom: 70px;
+
+}
+
+.product_title ul {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+  /* width: 848px; */
+  margin: 0 auto;
+
+}
+
+.product_title li {
+  margin-right: 10px;
+  width: 180px;
+  text-align: center;
+  border: 1px solid #c4c4c4;
+}
+
+.product_title li {
+  margin-right: 0;
+}
+
+.product_title li.active a {
+  background: black;
+  color: #fff;
+}
+
+.product_title li a {
+  display: block;
+  padding: 15px 0;
+  font-size: 18px;
+  color: black;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.product_list>div {
+  display: block;
+  display: flex;
+  justify-content: flex-start;
+  overflow: hidden;
+}
+
+.product_list>div>div {
+  margin-right: 28px;
+  border: 1px solid rgb(213, 213, 213);
+  width: 278px;
+}
+
+.product_list>div>div:last-child {
+  margin-right: 0;
+}
+
+.product_list>div>div .product_img {
+  position: relative;
+  overflow: hidden;
+}
+
+.product_list>div>div .rank {
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  font-size: 20px;
+  box-shadow: 1px 1px 5px rgb(0 0 0 / 25%);
+  background-color: black;
+  text-align: center;
+}
+
+.product_list>div>div .rank strong {
+  color: #fff;
+}
+
+.product_list>div>div .product_info {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product_list>div>div .product_info h3 {
+  color: #333;
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.product_list>div>div .product_info p {
+  display: inline-block;
+  font-size: 14px;
+}
+
+
+/* 리뷰 배너 */
+.sub_banner {
+  padding: 40px;
+  position: relative;
+  width: 100%;
+  /* height: 320px; */
+  background: url(/img/review_event_bg.png) no-repeat center;
+}
+
+.banner_text {
+  text-align: center;
+  color: #fff;
+}
+
+.banner_text h2 {
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.banner_text p {
+  color: #fff;
+}
+
+.banner_text button {
+  margin-top: 15px;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+}
+
+.banner_text .more_view {
+  color: #fff;
+  width: 120px;
+  padding: 8px;
+  border: 1px solid #fff;
+}
+
+
+/* 핫 뉴스 */
+.hot_news {
+  margin-top: 80px;
+}
+
+.hot_news h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+
+.hot_news_box {
+  padding-top: 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.hot_news_box_cont {
+  background-color: #000;
+  overflow: hidden;
+}
+
+
+.hot_news_box_cont .cont_img img {
+  width: 100%;
+}
+
+.cont_info {
+  padding: 20px 10px 25px 10px;
+  text-align: center;
+  color: #fff;
+}
+
+.cont_info strong {
+  font-size: 20px;
+}
+
+.cont_info p {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+/* 온라인 서비스 */
+.services {
+  margin-top: 80px;
+}
+
+.services h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.services_box {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.services_img {
+  margin-top: 30px;
+}
+
+.services_img img {
+  width: 100%;
+}
+
+.services_info {
+  padding: 15px;
+  text-align: center;
+  color: black;
+}
+
+.services_info strong {
+  font-size: 18px;
+}
+
+.services_info p {
+  font-size: 16px;
+}
+
+.services_info span {
+  display: block;
+  margin-top: 10px;
+  text-decoration: underline;
+}
+
+/* footer */
+.footer_1 {
+  background-color: #000;
+  color: #fff;
+  margin-top: 80px;
+}
+
+.footer_1 .container {
+  width: 100%;
+  padding: 40px 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer_a {
+  /* flex: 0 0 25%; */
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.footer_a h2 img {
+  width: 122px;
+}
+
+.footer_a ul {
+  display: flex;
+}
+
+.footer_b {
+  /* flex: 0 0 65%; */
+  display: flex;
+  color: #fff;
+}
+
+.footer_b div {
+  margin-bottom: 20px;
+  flex: 1;
+  margin-left: 50px;
+}
+
+.footer_b div h3 {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #fff;
+  font-size: 14px;
+}
+
+.footer_b div ul li a {
+  display: block;
+  padding: 6px 0;
+  color: inherit;
+  font-size: 13px;
+}
+
+.footer_2 {
+  padding: 20px;
+  width: 100%;
+
+  background-color: #292929;
+  color: #a4a4a4;
+  text-align: left;
+}
+
+.footer_2 p {
+  font-size: 12px;
+}
+
+
+
+
+
+
+
+/* 반응형 */
+@media (max-width: 1420px) {
+  .header_menu {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 1280px) {
+  .header_nav {
+    padding: 0 15px;
+  }
+
+  .header_menu {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media(max-width:1240px) {}
+
+@media(max-width:1200px) {
+  .container {
+    width: 100%;
+  }
+
+  .makeup_trend_img {
+    padding: 20px;
+  }
+
+  .hot_news_box {
+    padding: 20px;
+  }
+
+  .product_list>div {
+    overflow: scroll;
+  }
+
+  .hot_news_box_cont {
+    margin-right: 10px;
+  }
+
+  .hot_news_box_cont:last-child {
+    margin-right: 0;
+  }
+
+  .services_box {
+    padding: 10px;
+    overflow: scroll;
+  }
+
+  .services_cont {
+    margin-right: 10px;
+  }
+
+  .services_cont:last-child {
+    margin-right: 0;
+  }
+
+
+
+  @media (max-width: 1080px) {
+
+    /* 메뉴 */
+    .header_nav {
+      padding: 0 15px;
+    }
+
+    .header_menu>ul>li {
+      margin-right: 10px;
+    }
+  }
+
+  @media (max-width: 960px) {
+    .header_nav {
+      padding: 0 10px;
+    }
+
+    .header_menu>ul>li {
+      margin-right: 10px;
+    }
+
+    /* 메인배너 */
+    .main_banner {
+      position: relative;
+    }
+
+    .main_banner .main_text {
+      display: none;
+    }
+
+
+    .main_banner .main_img {
+      width: 100%;
+      height: 860px;
+      background: url(/img/main_lasa.png)no-repeat;
+      background-position: center;
+    }
+
+    .main_img_bg {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(4, 4, 4, 0.3);
+    }
+
+    .m_main_text {
+      text-align: center;
+      display: block;
+      position: absolute;
+      width: 100%;
+      top: 68%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: #fff;
+    }
+
+    .m_main_text h2 {
+      text-transform: uppercase;
+      font-size: 50px;
+    }
+
+    .m_main_text p {
+      font-size: 20px;
+      font-weight: 300;
+    }
+
+    .m_main_text span {
+      font-weight: 300;
+      display: block;
+      margin-top: 15px;
+      font-size: 18px;
+    }
+
+    /* 제품소개 */
+    .product_list {
+      padding: 0 10px;
+    }
+  }
+
+
+  @media (max-width: 768px) {
+
+    /* 헤더 */
+    #header {
+      height: 87px;
+    }
+
+    .row {
+      display: none;
+    }
+
+    .nav_account {
+      display: none;
+    }
+
+    /* 로고 */
+    .nav_logo {
+      margin-right: 5px;
+    }
+
+    .nav_icon {
+      display: none;
+    }
+
+    /* 메뉴 */
+    .header_menu {
+      display: none;
+    }
+
+    /* 햄버거메뉴 */
+    .menu_icon {
+      display: block;
+      margin-right: 10px;
+      position: absolute;
+      top: 50%;
+      right: 0;
+      transform: translateY(-50%);
+      cursor: pointer;
+      z-index: 5;
+    }
+
+    input[id="menu"] {
+      display: none;
+    }
+
+    input[id="menu"]+label {
+      position: relative;
+      display: block;
+      width: 30px;
+      height: 24px;
+      cursor: pointer;
+    }
+
+    input[id="menu"]+label span {
+      position: absolute;
+      display: block;
+      width: 100%;
+      height: 2px;
+      border-radius: 30px;
+      background: #fff;
+      transition: 0.3s;
+    }
+
+    input[id="menu"]+label span:nth-child(1) {
+      top: 0;
+    }
+
+    input[id="menu"]+label span:nth-child(2) {
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    input[id="menu"]+label span:nth-child(3) {
+      bottom: 0;
+    }
+
+    /* 햄버거메뉴 클릭 시 */
+    input[id="menu"]:checked+label span:nth-child(1) {
+      top: 50%;
+      transform: translateY(-50%) rotate(45deg);
+    }
+
+    input[id="menu"]:checked+label span:nth-child(2) {
+      opacity: 0;
+    }
+
+    input[id="menu"]:checked+label span:nth-child(3) {
+      bottom: 50%;
+      transform: translateY(50%) rotate(-45deg);
+    }
+
+    /* 푸터 */
+    .footer_2 .footer_info_1 {
+      padding-top: 0;
+    }
+
+    #main {
+      padding-top: 87px;
+      width: 100%;
+    }
+
+  }
+
+  @media (max-width: 576px) {
+
+    h2 {
+      font-size: 45px;
+    }
+
+    /* 메인배너 */
+    .main_banner .main_img {
+      height: 750px;
+    }
+
+    .m_main_text {
+      top: 73%;
+      padding: 10px;
+    }
+
+    .makeup_trend_img {
+      height: 650px;
+      margin-top: 10px;
+    }
+
+    /* 메이크업트랜드 */
+    .makeup_trend_title {
+      padding-top: 45px;
+    }
+
+    /* 제품소개 */
+    .product_cont .product {
+      padding-top: 45px;
+    }
+
+    .product_title {
+      padding: 30px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    /* 뉴스 */
+    .hot_news_box {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hot_news_box_cont {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+
+    .services_box {
+      overflow: visible;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* 온라인서비스 */
+    .services {
+      margin-top: 40px;
+    }
+
+    /* 푸터 */
+    .footer_b {
+      align-items: flex-start;
+    }
+
+    .footer_b div {
+      margin-left: 10px;
+    }
+
+  }
+
+  @media (max-width: 375px) {
+    h2 {
+      font-size: 38px;
+    }
+
+    /* 메인배너 */
+    .main_banner .main_img {
+      height: 620px;
+    }
+
+    .m_main_text {
+      top: 50%;
+    }
+
+    /* 메이크업트랜드 */
+    .makeup_trend_img {
+      height: 550px;
+    }
+  }
